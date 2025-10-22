@@ -1,0 +1,9 @@
+```markdown
+```mermaid
+graph TD
+A[User / Service] -->|AssumeRole via STS| B[IAM Role: EC2S3AccessRole]
+B -->|Temporary Credentials| C[EC2 Instance]
+C -->|Access| D[S3 Buckets]
+B --> E[Attached Policy: S3ReadOnlyAccess]
+B --> F[Trust Policy: ec2.amazonaws.com]
+```

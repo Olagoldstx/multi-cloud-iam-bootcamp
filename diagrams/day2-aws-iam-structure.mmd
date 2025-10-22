@@ -1,0 +1,9 @@
+```mermaid
+graph TD
+A[Root Account] --> B[User: CloudEngineer]
+B --> C[Group: CloudAdmins]
+C --> D[Policy: AdministratorAccess]
+C --> E[Custom Policy: AdminReadOnly]
+A --> F[Role: EC2S3Role]
+F --> G[AWS Services (EC2, Lambda)]
+```
