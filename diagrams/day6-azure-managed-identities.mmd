@@ -1,0 +1,8 @@
+```mermaid
+graph TD
+A[Azure VM] -->|System-Assigned Identity| B[Azure AD Token Service]
+C[Web App] -->|User-Assigned Identity| B
+B -->|Access Token| D[Azure Resource: Key Vault / Storage]
+E[User] -->|Activate via PIM| F[Global Administrator (JIT)]
+F -->|Temporary Access| G[Azure Resources]
+```

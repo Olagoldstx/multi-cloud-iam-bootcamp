@@ -1,0 +1,8 @@
+```mermaid
+graph TD
+A[User / Service Account] -->|Policy Binding| B[Role: Viewer]
+B -->|Access Granted| C[Resource: GCP Project]
+A --> D[Role: Editor]
+D --> C
+C --> E[Audit Logs / Cloud Audit Logs]
+```
