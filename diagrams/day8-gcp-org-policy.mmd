@@ -1,0 +1,10 @@
+```mermaid
+graph TD
+A[Organization] --> B[Folder: Security]
+B --> C[Project: DevOps]
+A -->|Constraint| D[Disable Service Account Key Creation]
+C --> E[Custom Role: customViewer]
+E --> F[Permissions: compute.instances.get, storage.buckets.list]
+F --> G[User: devops@company.com]
+A --> H[Audit Logging / Policy Intelligence]
+```
